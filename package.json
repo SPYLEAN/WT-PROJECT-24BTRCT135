@@ -1,0 +1,22 @@
+{
+  "name": "blind-date",
+  "version": "1.0.0",
+  "description": "A fully functional, single-page web application (SPA) built purely with HTML, CSS, and Vanilla JavaScript. This tool serves as a comprehensive dashboard for founders, product managers, and entrepreneurs to validate, plan, and analyze their startup ideas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^12.8.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3"
+  }
+}
