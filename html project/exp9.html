@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - Single Page Application</title>
+    <style>
+        /* CSS to make the single-page layout look professional */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .btn {
+            background: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #555;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>This section represents the <b>Home Page</b>. By using internal IDs, I have consolidated multiple HTML pages into this single document structure.</p>
+        <img src="https://via.placeholder.com/600x200" alt="Portfolio Banner" style="width:100%; border-radius: 8px;">
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am an Engineering student focused on building clean and efficient web interfaces. This experiment demonstrates the transition from a multi-page site to an SPA.</p>
+        <h3>My Technical Skills:</h3>
+        <ul>
+            <li>HTML5 Semantic Structures</li>
+            <li>Internal & External CSS Linking</li>
+            <li>Single Page Application (SPA) Logic</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>My Project Gallery</h2>
+        <p>This table tracks the progress of my current Web Programming laboratory assignments.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Project No.</th>
+                    <th>Task Description</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Exp 01</td>
+                    <td>Personal Portfolio (SPA Construction)</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td>Exp 02</td>
+                    <td>E-Commerce Interface with Validation</td>
+                    <td>Completed</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form onsubmit="alert('Information Submitted Successfully!'); return false;">
+            <label for="user_name">Full Name:</label>
+            <input type="text" id="user_name" name="user_name" placeholder="Enter your name" required>
+            
+            <label for="user_email">Email Address:</label>
+            <input type="email" id="user_email" name="user_email" placeholder="name@example.com" required>
+            
+            <label for="user_msg">Your Message:</label>
+            <textarea id="user_msg" name="user_msg" rows="4" placeholder="How can I help you?"></textarea>
+            
+            <button type="submit" class="btn">Submit Info</button>
+        </form>
+    </section>
+
+    <footer style="text-align: center; padding: 20px; color: #777; font-size: 0.9em;">
+        &copy; 2026 Student Web Lab | Experiment 1 Portfolio
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Website with Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="#home">Home</a> 
+        <a href="#about">About</a> 
+        <a href="#calculator">Calculator</a> <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="calculator">
+        <center>
+            <h2>Scientific Calculator</h2>
+            <p>A functional tool built with <b>JavaScript</b>.</p>
+        </center>
+
+        <div class="calc-container">
+            <input type="text" id="display" disabled>
+            
+            <div class="calc-buttons">
+                <button class="calc-btn scientific" onclick="press('Math.sin(')">sin</button>
+                <button class="calc-btn scientific" onclick="press('Math.cos(')">cos</button>
+                <button class="calc-btn scientific" onclick="press('Math.tan(')">tan</button>
+                <button class="calc-btn scientific" onclick="press('Math.log10(')">log</button>
+
+                <button class="calc-btn scientific" onclick="press('Math.PI')">π</button>
+                <button class="calc-btn scientific" onclick="press('Math.sqrt(')">√</button>
+                <button class="calc-btn scientific" onclick="press('**')">xʸ</button>
+                <button class="calc-btn operator" onclick="press('/')">÷</button>
+
+                <button class="calc-btn" onclick="press('7')">7</button>
+                <button class="calc-btn" onclick="press('8')">8</button>
+                <button class="calc-btn" onclick="press('9')">9</button>
+                <button class="calc-btn operator" onclick="press('*')">×</button>
+
+                <button class="calc-btn" onclick="press('4')">4</button>
+                <button class="calc-btn" onclick="press('5')">5</button>
+                <button class="calc-btn" onclick="press('6')">6</button>
+                <button class="calc-btn operator" onclick="press('-')">−</button>
+
+                <button class="calc-btn" onclick="press('1')">1</button>
+                <button class="calc-btn" onclick="press('2')">2</button>
+                <button class="calc-btn" onclick="press('3')">3</button>
+                <button class="calc-btn operator" onclick="press('+')">+</button>
+
+                <button class="calc-btn" onclick="press('0')">0</button>
+                <button class="calc-btn" onclick="press('.')">.</button>
+                <button class="calc-btn" onclick="press('(')">(</button>
+                <button class="calc-btn" onclick="press(')')">)</button>
+
+                <button class="calc-btn clear" onclick="clearDisplay()">C</button>
+                <button class="calc-btn equals" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const display = document.getElementById('display');
+
+        function press(value) {
+            display.value += value;
+        }
+
+        function clearDisplay() {
+            display.value = "";
+        }
+
+        function calculate() {
+            try {
+                // eval() takes the string in the display and runs it as math
+                display.value = eval(display.value);
+            } catch (error) {
+                display.value = "Error";
+                setTimeout(clearDisplay, 1500);
+            }
+        }
+    </script>
+
+    </body>
+</html>

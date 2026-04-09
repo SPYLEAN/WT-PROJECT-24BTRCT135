@@ -1,0 +1,25 @@
+<h3>Type something (Press 'R' for Red, 'G' for Green)</h3>
+<input type="text" id="userInput" placeholder="Type here...">
+<div id="box" style="width:100px; height:100px; border:1px solid white; margin-top:10px;"></div>
+
+<script>
+    const inputField = document.getElementById('userInput');
+    const colorBox = document.getElementById('box');
+
+    // Handle Keydown Event
+    window.addEventListener('keydown', function(event) {
+        // Change box color based on key
+        if (event.key.toLowerCase() === 'r') {
+            colorBox.style.backgroundColor = 'red';
+        } else if (event.key.toLowerCase() === 'g') {
+            colorBox.style.backgroundColor = 'green';
+        }
+    });
+
+    // Handle Enter Key inside input
+    inputField.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            alert("You pressed Enter! Input value: " + inputField.value);
+        }
+    });
+</script>

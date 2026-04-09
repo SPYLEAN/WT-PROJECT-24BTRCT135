@@ -1,0 +1,30 @@
+<button id="colorBtn">Hover or Click Me</button>
+<p id="status">Status: Waiting...</p>
+
+<style>
+    #colorBtn { padding: 10px 20px; cursor: pointer; transition: 0.3s; }
+    .active-bg { background-color: #00d2ff; color: white; }
+</style>
+
+<script>
+    const btn = document.getElementById('colorBtn');
+    const statusText = document.getElementById('status');
+
+    // Handle Click Event
+    btn.addEventListener('click', function() {
+        alert("Button was clicked!");
+        statusText.innerText = "Status: Button Clicked";
+    });
+
+    // Handle MouseOver Event
+    btn.addEventListener('mouseover', function() {
+        btn.classList.add('active-bg');
+        statusText.innerText = "Status: Mouse is Hovering";
+    });
+
+    // Handle MouseOut Event
+    btn.addEventListener('mouseout', function() {
+        btn.classList.remove('active-bg');
+        statusText.innerText = "Status: Mouse Left";
+    });
+</script>
